@@ -1,17 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080a11" />
-    <meta
-      name="description"
-      content="Glitch Games — an interactive 3D studio portfolio."
-    />
-    <title>Glitch Games — Enter the Glitch</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>GLITCH GAMES — Interactive Studio World</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loading">
+  <div class="brand">GLITCH GAMES</div>
+  <div class="brand-sub">Interactive Studio World</div>
+  <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+  <button id="startBtn">Enter the world</button>
+</div>
+
+<canvas id="c"></canvas>
+
+<div id="hud">
+  <div class="logo-tag">GLITCH<span>GAMES</span></div>
+  <div id="stateTag">MODE <b id="modeLabel">ON FOOT</b></div>
+
+  <div id="zoneBanner">
+    <div class="eyebrow" id="zoneEyebrow">SECTION</div>
+    <div class="title" id="zoneTitle">—</div>
+  </div>
+
+  <div id="promptWrap"><div id="interactPrompt"><kbd>E</kbd><span id="promptText">Interact</span></div></div>
+
+  <div id="controls">
+    <b>Controls</b>
+    <div class="row"><span>Move</span><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div>
+    <div class="row"><span>Sprint</span><kbd>Shift</kbd></div>
+    <div class="row"><span>Jump</span><kbd>Space</kbd></div>
+    <div class="row"><span>Duck</span><kbd>Ctrl</kbd></div>
+    <div class="row"><span>Interact</span><kbd>E</kbd></div>
+    <div class="row"><span>Look</span><span>Drag mouse</span></div>
+  </div>
+  <div id="mobileNote">Best explored on desktop with a keyboard — touch controls coming soon.</div>
+</div>
+
+<div id="overlay">
+  <div id="panel">
+    <button id="closePanel">✕</button>
+    <div id="panelBody"></div>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="main.js"></script>
+</body>
 </html>

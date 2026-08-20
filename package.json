@@ -1,23 +1,9 @@
 {
-  "name": "glitch-games-3d-site",
+  "name": "glitch-games-world",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.3.0",
-  "type": "module",
+  "description": "Glitch Games — interactive 3D studio world (Three.js, static site, no build step)",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "three": "^0.179.1",
-    "gsap": "^3.13.0",
-    "howler": "^2.2.4",
-    "@dimforge/rapier3d-compat": "^0.17.3"
-  },
-  "devDependencies": {
-    "@types/three": "^0.179.0",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.2",
-    "@types/howler": "^2.2.12"
+    "dev": "npx serve ."
   }
 }
